@@ -16,8 +16,8 @@ variable "zone" {
   default     = "us-central1-a"
 }
 
-variable "K8s_version" {
-  description = "this is the gke version"
-  type        = string
-  default     = "1.32.6-gke.1025000"
-}
+# variable "K8s_version" {
+#  description = "this is the gke version"
+#  type        = string
+#  default     = "1.32.6-gke.1025000"
+# }
