@@ -19,5 +19,5 @@ variable "zone" {
 variable "K8s_version" {
   description = "this is the gke version"
   type        = string
-  default     = "1.31.6-gke.1020000"
+  default     = "1.32.6-gke.1025000"
 }
