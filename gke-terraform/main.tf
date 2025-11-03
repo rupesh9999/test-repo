@@ -50,7 +50,9 @@ resource "google_container_cluster" "primary" {
   project = var.project
   name = "terraform-gke-cluster"
   location = var.zone  # Changed from var.region to var.zone for zonal cluster
-  min_master_version = var.K8s_version  # Use the defined variable to pin version
+  release_channel {    # Added: Enables auto-upgrades and uses latest supported version
+    channel = "STABLE"
+  }
   network = google_compute_network.custom_network.id
   subnetwork = google_compute_subnetwork.custom-subnet.id
   deletion_protection = false
